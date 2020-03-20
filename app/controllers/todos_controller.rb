@@ -3,6 +3,7 @@ class TodosController < ApplicationController
 
   def index
     @todos = current_user.todos
+    @todo = Todo.new
   end
 
   def show; end
