@@ -1,0 +1,4 @@
+<%= simple_form_for [current_user, current_user.todos.new] do |f|%>
+  <%= f.input :name  %>
+  <%= f.date_field :due_date %>
+<% end %>

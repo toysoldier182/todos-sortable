@@ -1,0 +1,12 @@
+<h1>My Todo's</h1>
+
+<%= render "new"  %>
+
+<ul>
+  <% @todos.each do |todo| %>
+    <p><%= todo.name %></p>
+    <p><%= todo.due_date %></p>
+    <p><%= todo.completed %></p>
+  <% end %>
+</ul>
+

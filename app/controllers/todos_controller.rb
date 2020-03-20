@@ -2,7 +2,7 @@ class TodosController < ApplicationController
   before_action :set_todo, only: [:show, :destroy]
 
   def index
-    @todos = Todo.where(user_id == current_user.id)
+    @todos = current_user.todos
   end
 
   def show; end
