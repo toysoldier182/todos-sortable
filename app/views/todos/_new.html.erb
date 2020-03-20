@@ -1,5 +1,7 @@
-<%= simple_form_for @todo do |f|%>
-  <%= f.input :name  %>
-  <%= f.date_field :due_date %>
-  <%= f.submit %>
-<% end %>
+<div data-controller="todos">
+  <%= simple_form_for @todo do |f|%>
+    <%= f.input :name, data: { action: "posts#addName" } %>
+    <%= f.date_field :due_date, data: { action: "posts#addDate" } %>
+    <%= f.submit %>
+  <% end %>
+</div>
